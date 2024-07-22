@@ -14,7 +14,7 @@
         .text-container {
             height: 550px;
             width: 70%;
-            background-color: #fdf6fc;
+            background-color:  #daeaf8;
             margin: 30px auto;
             border: 1px solid gray;
         }
@@ -23,6 +23,11 @@
 
             display: flex;
             justify-content: space-around;
+        }
+        .img{
+            height:60px;
+            width: 50px;
+            margin-top:130px;
         }
 
         .input-text {
@@ -36,12 +41,14 @@
             width: 300px;
             border: 1px solid gray;
             font-size:20px ;
+            background-color: white;
 
         }
 
         .button-container {
             display: flex;
             justify-content: space-around;
+            align-items: center;
             margin-top: 20px;
         }
 
@@ -49,7 +56,8 @@
             height: 50px;
             width: 120px;
             border-radius: 5px;
-            background-color:#abdbe3;
+            background-color:#fd6666;
+            font-weight:large;
         }
     </style>
 </head>
@@ -59,6 +67,7 @@
         <h1 class="HEADING">TEXTIFY</h1>
         <div class="input-box">
             <input type="text" placeholder="Type Here..." class="input-text" id="input-text">
+            <img src="/arrow.png" class="img">
             <p class="result-text" id="result-text"></p>
         </div>
         <div class="button-container">
