@@ -1,11 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TEXTIFY</title>
+    <style>
+        .HEADING {
+            text-align: center;
+            text-decoration: underline;
+        }
+
+        .text-container {
+            height: 500px;
+            width: 70%;
+            background-color: aliceblue;
+            margin: 30px auto;
+            border: 1px solid gray;
+        }
+
+        .input-box {
+
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .input-text {
+            height: 300px;
+            width: 300px;
+            font-size: 20px;
+        }
+
+        .result-text {
+            height: 300px;
+            width: 300px;
+            border: 1px solid gray;
+            font-size:20px ;
+
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .action-btn {
+            height: 40px;
+            width: 100px;
+            border-radius: 5px;
+            background-color: bisque;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <div class="text-container">
+        <h1 class="HEADING">TEXTIFY</h1>
+        <div class="input-box">
+            <input type="text" placeholder="Type Here..." class="input-text" id="input-text">
+            <p class="result-text" id="result-text"></p>
+        </div>
+        <div class="button-container">
+            <button class="action-btn" onclick="giveActionResult('uppercase')">UPPERCASE</button>
+            <button class="action-btn" onclick="giveActionResult('lowercase')">lowercase</button>
+            <button class="action-btn" onclick="giveActionResult('character count')">character count</button>
+        </div>
+    </div>
+    <script>
+        function giveActionResult(action) {
+            const inputelement = document.getElementById("input-text")
+            const resultelement = document.getElementById("result-text")
+
+            const inputval = inputelement.value
+
+            switch (action) {
+                case 'uppercase':
+                    resultelement.innerText = inputval.toUpperCase()
+                    break;
+                case 'lowercase':
+                    resultelement.innerText = inputval.toLowerCase()
+                    break;
+                case 'character count':
+                    resultelement.innerText = `Totle Characters: ${inputval.length}`
+                    break;
+                default:
+                    break;
+            }
+
+        }
+
+    </script>
 </body>
+
 </html>
